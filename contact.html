@@ -1,12 +1,12 @@
 <!-- ============================================ -->
-<!-- CONTACT PAGE (contact.html) -->
+<!-- SPONSORS PAGE (sponsors.html) -->
 <!-- ============================================ -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Brainwave Foundation</title>
+    <title>Sponsors - Brainwave Foundation</title>
     <style>
         * {
             margin: 0;
@@ -109,313 +109,267 @@
             padding: 20px;
         }
 
-        /* Contact Info Section */
-        .contact-info-section {
+        /* Why Sponsor Section */
+        .why-sponsor {
             padding: 80px 20px;
             background: #f8f9fa;
         }
 
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+        .why-sponsor h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #667eea;
             margin-bottom: 60px;
         }
 
-        .contact-card {
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .benefit-card {
             background: white;
-            padding: 40px;
+            padding: 40px 30px;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             text-align: center;
             transition: transform 0.3s;
         }
 
-        .contact-card:hover {
+        .benefit-card:hover {
             transform: translateY(-10px);
         }
 
-        .contact-icon {
+        .benefit-icon {
             font-size: 3.5em;
             margin-bottom: 20px;
-            color: #667eea;
         }
 
-        .contact-card h3 {
+        .benefit-card h3 {
             color: #667eea;
             font-size: 1.5em;
             margin-bottom: 15px;
         }
 
-        .contact-card p {
+        .benefit-card p {
             color: #666;
-            font-size: 1.1em;
-            margin: 10px 0;
+            line-height: 1.6;
         }
 
-        .contact-card a {
+        /* Sponsorship Packages */
+        .packages-section {
+            padding: 80px 20px;
+        }
+
+        .packages-section h2 {
+            text-align: center;
+            font-size: 2.5em;
             color: #667eea;
+            margin-bottom: 60px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+
+        .package-card:hover {
+            transform: scale(1.05);
+        }
+
+        .package-header {
+            padding: 40px 30px;
+            color: white;
+            text-align: center;
+        }
+
+        .package-card.platinum .package-header {
+            background: linear-gradient(135deg, #E5E4E2, #BCC6CC);
+        }
+
+        .package-card.gold .package-header {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+        }
+
+        .package-card.silver .package-header {
+            background: linear-gradient(135deg, #C0C0C0, #A8A8A8);
+        }
+
+        .package-card.bronze .package-header {
+            background: linear-gradient(135deg, #CD7F32, #B8860B);
+        }
+
+        .package-icon {
+            font-size: 4em;
+            margin-bottom: 15px;
+        }
+
+        .package-name {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .package-amount {
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        .package-body {
+            padding: 40px 30px;
+        }
+
+        .package-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .package-body li {
+            padding: 12px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #666;
+        }
+
+        .package-body li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .package-btn {
+            display: block;
+            margin-top: 30px;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .package-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Current Sponsors */
+        .current-sponsors {
+            padding: 80px 20px;
+            background: #f8f9fa;
+        }
+
+        .current-sponsors h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 60px;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .sponsor-logo {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #667eea;
+            min-height: 150px;
+            transition: transform 0.3s;
+        }
+
+        .sponsor-logo:hover {
+            transform: scale(1.1);
+        }
+
+        /* Contact CTA */
+        .sponsor-cta {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .sponsor-cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .sponsor-cta p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+        }
+
+        .contact-info-box {
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info-box h3 {
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .contact-info-box p {
+            margin: 15px 0;
+            font-size: 1.2em;
+        }
+
+        .contact-info-box a {
+            color: #FFD700;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .contact-card a:hover {
+        .contact-info-box a:hover {
             text-decoration: underline;
-        }
-
-        /* Contact Form Section */
-        .contact-form-section {
-            padding: 80px 20px;
-        }
-
-        .form-container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: white;
-            padding: 50px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-
-        .contact-form-section h2 {
-            text-align: center;
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .contact-form-section .subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.2em;
-            margin-bottom: 40px;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #667eea;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border-color 0.3s;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-
-        .form-group.error input,
-        .form-group.error select,
-        .form-group.error textarea {
-            border-color: #e74c3c;
-        }
-
-        .error-message {
-            color: #e74c3c;
-            font-size: 0.9em;
-            margin-top: 5px;
-            display: none;
-        }
-
-        .form-group.error .error-message {
-            display: block;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .submit-btn:hover:not(:disabled) {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
-        }
-
-        .submit-btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-
-        /* Map Section */
-        .map-section {
-            padding: 80px 20px;
-            background: #f8f9fa;
-        }
-
-        .map-section h2 {
-            text-align: center;
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-        }
-
-        .map-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            height: 400px;
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #666;
-            font-size: 1.2em;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 80px 20px;
-        }
-
-        .faq-section h2 {
-            text-align: center;
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 60px;
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: white;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 25px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #f8f9fa;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: #e9ecef;
-        }
-
-        .faq-question h3 {
-            color: #667eea;
-            font-size: 1.2em;
-            margin: 0;
-        }
-
-        .faq-toggle {
-            font-size: 1.5em;
-            color: #667eea;
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-toggle {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            padding: 0 25px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-        }
-
-        .faq-item.active .faq-answer {
-            padding: 25px;
-            max-height: 500px;
-        }
-
-        .faq-answer p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Success Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.5);
-        }
-
-        .modal-content {
-            background-color: white;
-            margin: 10% auto;
-            padding: 50px;
-            border-radius: 20px;
-            max-width: 500px;
-            text-align: center;
-        }
-
-        .modal-content .success-icon {
-            font-size: 5em;
-            color: #4CAF50;
-            margin-bottom: 20px;
-        }
-
-        .modal-content h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .modal-content p {
-            color: #666;
-            margin-bottom: 30px;
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 2em;
-            cursor: pointer;
-            color: #999;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 30px;
+            padding: 15px 40px;
+            margin: 10px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            background: #667eea;
-            color: white;
             transition: transform 0.3s;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background: #FFD700;
+            color: #333;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
         }
 
         .btn:hover {
@@ -437,40 +391,76 @@
         }
 
         /* Mobile Responsive */
-        @media (max-width: 768px) {
-            nav ul {
-                display: none;
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(102, 126, 234, 0.98);
-                padding: 20px;
-                gap: 15px;
-            }
+        /* Mobile Responsive */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(102, 126, 234, 0.98);
+        padding: 20px;
+        gap: 15px;
+    }
 
-            nav ul.active {
-                display: flex;
-            }
+    nav ul.active {
+        display: flex;
+    }
 
-            .mobile-menu-btn {
-                display: block;
-            }
+    .mobile-menu-btn {
+        display: block;
+    }
 
-            .page-header h1 {
-                font-size: 2em;
-            }
+    .page-header h1 {
+        font-size: 2em;
+    }
 
-            .form-container {
-                padding: 30px 20px;
-            }
+    .page-header p {
+        font-size: 1.1em;
+    }
 
-            .modal-content {
-                margin: 30% auto;
-                padding: 30px;
-            }
-        }
+    .why-sponsor h2,
+    .packages-section h2,
+    .current-sponsors h2,
+    .sponsor-cta h2 {
+        font-size: 1.8em;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-card {
+        padding: 30px 20px;
+    }
+
+    .packages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .package-card {
+        margin-bottom: 20px;
+    }
+
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-info-box {
+        padding: 30px 20px;
+    }
+
+    .sponsor-cta p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px 0;
+    }
+}
     </style>
 </head>
 <body>
@@ -484,232 +474,234 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="prizes.html">Prizes</a></li>
                 <li><a href="register.html">Register</a></li>
-                <li><a href="sponsors.html">Sponsors</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="sponsors.html" class="active">Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Contact Us</h1>
-        <p>We'd Love to Hear From You!</p>
-        
+        <h1>Partner With Us</h1>
+        <p>Help Shape the Future of Education in Nigeria</p>
     </section>
 
-    <!-- Contact Info Section -->
-    <section class="contact-info-section">
+    <!-- Why Sponsor Section -->
+    <section class="why-sponsor">
         <div class="container">
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Phone</h3>
-                    <p><a href="tel:+2349053044837">+234 905 304 4837</a></p>
-                    <p style="color: #999; font-size: 0.9em;">Monday - Friday: 9AM - 5PM</p>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">📧</div>
-                    <h3>Email</h3>
-                    <p><a href="mailto:educationbringback@gmail.com">educationbringback@gmail.com</a></p>
-                    <p><a href="mailto:sponsors@bringingbackeducation.org">sponsors@bringingbackeducation.org</a></p>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Location</h3>
-                    <p>Fedarl Capital Territory</p>
-                    <p>Nigeria</p>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon">📱</div>
-                    <h3>Social Media</h3>
-                    <p><a href="#" target="_blank">Facebook</a></p>
-                    <p><a href="#" target="_blank">Twitter</a></p>
-                    <p><a href="#" target="_blank">Instagram</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="form-container">
-                <h2>Send Us a Message</h2>
-                <p class="subtitle">Have questions? Fill out the form below and we'll get back to you soon!</p>
-
-                <form id="contactForm" onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                        <span class="error-message">Please enter your name</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required>
-                        <span class="error-message">Please enter a valid email</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="Optional">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a subject</option>
-                            <option value="General Inquiry">General Inquiry</option>
-                            <option value="Registration Question">Registration Question</option>
-                            <option value="Sponsorship Inquiry">Sponsorship Inquiry</option>
-                            <option value="Partnership Opportunity">Partnership Opportunity</option>
-                            <option value="Media & Press">Media & Press</option>
-                            <option value="Volunteer">Volunteer Opportunity</option>
-                            <option value="Feedback">Feedback</option>
-                            <option value="Other">Other</option>
-                        </select>
-                        <span class="error-message">Please select a subject</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
-                        <span class="error-message">Please enter your message</span>
-                    </div>
-
-                    <button type="submit" class="submit-btn" id="submitBtn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="map-section">
-        <div class="container">
-            <h2>Find Us</h2>
-            <div class="map-container">
-                <p>📍 Map will be available soon<br>Federal Capital Territory, Abuja, Nigeria</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Frequently Asked Questions</h2>
+            <h2>Why Sponsor This Event?</h2>
             
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>When is the event taking place?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>The Bringing Back Education 2026 event is coming soon. Registration opens several months in advance, so sign up early to secure your spot!</p>
-                    </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Brand Visibility</h3>
+                    <p>Reach thousands of students, parents, educators, and community members through event marketing and media coverage.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Who can participate?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Students aged 5-15 years from any school in Nigeria are welcome to participate. We have different categories for various age groups and grade levels.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🤝</div>
+                    <h3>Community Impact</h3>
+                    <p>Make a meaningful difference in education and demonstrate your commitment to youth development.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Is there a registration fee?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Registration details including any fees will be announced closer to the event date. Follow us on social media or contact us directly for the latest updates.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📱</div>
+                    <h3>Social Media Exposure</h3>
+                    <p>Featured prominently across all our social media platforms with dedicated sponsor recognition posts.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>What competitions are available?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer Academic Quiz, Spelling Bee, Reasoning Challenge, and Tech & Innovation competitions. Students can register for individual categories or all categories.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📰</div>
+                    <h3>Media Coverage</h3>
+                    <p>Recognition in press releases, news coverage, and promotional materials distributed widely.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>What prizes can students win?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Winners receive cash prizes ranging from ₦30,000 to ₦100,000, plus premium notebooks, stationery sets, trophies, certificates, and mentorship opportunities. Visit our Prizes page for full details.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎤</div>
+                    <h3>Speaking Opportunity</h3>
+                    <p>Address attendees at the event and share your organization's vision and values.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>How do I become a sponsor?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We offer various sponsorship packages from Bronze to Platinum. Contact us at sponsors@bringingbackeducation.org or call +234 905 304 4837 to discuss partnership opportunities.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🏆</div>
+                    <h3>Corporate Recognition</h3>
+                    <p>Receive certificates of appreciation and partnership, showcasing your corporate social responsibility.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Can parents attend the event?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes! Parents and guardians are encouraged to attend and support their children. Seating arrangements will be provided for family members and spectators.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌟</div>
+                    <h3>Employee Engagement</h3>
+                    <p>Boost employee morale by supporting meaningful educational initiatives in the community.</p>
                 </div>
 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>How can I volunteer for the event?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We welcome volunteers! Please contact us using the form above with "Volunteer" as the subject, or email us directly. We'll provide details about volunteer roles and requirements.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <h3>Will there be refreshments at the event?</h3>
-                        <span class="faq-toggle">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Yes, light refreshments will be provided for all participants. Special dietary requirements should be mentioned during registration.</p>
-                    </div>
-                </div>
-
-                    <div class="faq-answer">
-                        <p>We follow all current health guidelines and safety protocols. Specific measures will be communicated closer to the event date based on prevailing health recommendations.</p>
-                    </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Networking</h3>
+                    <p>Connect with other sponsors, educators, and community leaders at exclusive sponsor events.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Success Modal -->
-    <div id="successModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <div class="success-icon">✓</div>
-            <h2>Message Sent!</h2>
-            <p>Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
-            <button class="btn" onclick="closeModal()">Close</button>
+    <!-- Sponsorship Packages -->
+    <section class="packages-section">
+        <div class="container">
+            <h2>Sponsorship Packages</h2>
+            
+            <div class="packages-grid">
+                <!-- Platinum Package -->
+                <div class="package-card platinum">
+                    <div class="package-header">
+                        <div class="package-icon">💎</div>
+                        <div class="package-name">Platinum</div>
+                        <div class="package-amount">₦500,000+</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Exclusive title sponsor status</li>
+                            <li>Large logo on all materials</li>
+                            <li>10-minute keynote speech</li>
+                            <li>VIP seating for 10 guests</li>
+                            <li>Full-page ad in program</li>
+                            <li>Social media campaign (10 posts)</li>
+                            <li>Press release feature</li>
+                            <li>Banner at main venue</li>
+                            <li>Website homepage placement</li>
+                            <li>Exclusive sponsor dinner</li>
+                        </ul>
+                        <a href="contact.html" class="package-btn">Become a Platinum Sponsor</a>
+                    </div>
+                </div>
+
+                <!-- Gold Package -->
+                <div class="package-card gold">
+                    <div class="package-header">
+                        <div class="package-icon">🥇</div>
+                        <div class="package-name">Gold</div>
+                        <div class="package-amount">₦300,000</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Premier sponsor recognition</li>
+                            <li>Logo on all materials</li>
+                            <li>5-minute welcome speech</li>
+                            <li>VIP seating for 6 guests</li>
+                            <li>Half-page ad in program</li>
+                            <li>Social media mentions (6 posts)</li>
+                            <li>Press release mention</li>
+                            <li>Banner at venue</li>
+                            <li>Website sponsor page feature</li>
+                        </ul>
+                        <a href="contact.html" class="package-btn">Become a Gold Sponsor</a>
+                    </div>
+                </div>
+
+                <!-- Silver Package -->
+                <div class="package-card silver">
+                    <div class="package-header">
+                        <div class="package-icon">🥈</div>
+                        <div class="package-name">Silver</div>
+                        <div class="package-amount">₦150,000</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Major sponsor recognition</li>
+                            <li>Logo on select materials</li>
+                            <li>VIP seating for 4 guests</li>
+                            <li>Quarter-page ad in program</li>
+                            <li>Social media mentions (4 posts)</li>
+                            <li>Website listing</li>
+                            <li>Certificate of appreciation</li>
+                            <li>Event photo opportunities</li>
+                        </ul>
+                        <a href="contact.html" class="package-btn">Become a Silver Sponsor</a>
+                    </div>
+                </div>
+
+                <!-- Bronze Package -->
+                <div class="package-card bronze">
+                    <div class="package-header">
+                        <div class="package-icon">🥉</div>
+                        <div class="package-name">Bronze</div>
+                        <div class="package-amount">₦75,000</div>
+                    </div>
+                    <div class="package-body">
+                        <ul>
+                            <li>Sponsor recognition</li>
+                            <li>Logo in program booklet</li>
+                            <li>Reserved seating for 2 guests</li>
+                            <li>Social media mention (2 posts)</li>
+                            <li>Website listing</li>
+                            <li>Certificate of appreciation</li>
+                        </ul>
+                        <a href="contact.html" class="package-btn">Become a Bronze Sponsor</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px; padding: 30px; background: #f8f9fa; border-radius: 15px;">
+                <h3 style="color: #667eea; margin-bottom: 15px;">Custom Sponsorship Packages Available</h3>
+                <p style="color: #666; font-size: 1.1em;">
+                    We can create a customized sponsorship package tailored to your organization's goals and budget. 
+                    Contact us to discuss your specific needs and objectives.
+                </p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Current Sponsors -->
+    <section class="current-sponsors">
+        <div class="container">
+            <h2>Our Valued Partners</h2>
+            
+            <div class="sponsors-grid">
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+                <div class="sponsor-logo">
+                    <span>Your Logo Here</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 50px;">
+                <p style="font-size: 1.2em; color: #666;">
+                    Join these forward-thinking organizations in making a difference!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="sponsor-cta">
+        <div class="container">
+            <h2>Ready to Make an Impact?</h2>
+            <p>Let's discuss how we can partner to inspire the next generation</p>
+            
+            <div class="contact-info-box">
+                <h3>Get in Touch</h3>
+                <p>📞 Phone: <a href="tel:+2349053044837">+234 905 304 4837</a></p>
+                <p>📧 Email: <a href="mailto:sponsors@bringingbackeducation.org">sponsors@bringingbackeducation.org</a></p>
+                <p>📍 Location: Federal Capital Territory, Abuja, Nigeria</p>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
+                <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
 
    <!-- Footer -->
     <footer>
@@ -724,159 +716,6 @@
         function toggleMenu() {
             const menu = document.getElementById('nav-menu');
             menu.classList.toggle('active');
-        }
-
-        function toggleFAQ(element) {
-            const faqItem = element.parentElement;
-            const allItems = document.querySelectorAll('.faq-item');
-            
-            // Close all other items
-            allItems.forEach(item => {
-                if (item !== faqItem) {
-                    item.classList.remove('active');
-                }
-            });
-            
-            // Toggle current item
-            faqItem.classList.toggle('active');
-        }
-
-        function handleSubmit(event) {
-            event.preventDefault();
-            
-            // Clear previous errors
-            document.querySelectorAll('.form-group').forEach(group => {
-                group.classList.remove('error');
-            });
-
-            let isValid = true;
-
-            // Validate name
-            const name = document.getElementById('name');
-            if (!name.value || name.value.trim() === '') {
-                name.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            // Validate email
-            const email = document.getElementById('email');
-            if (!email.value || !isValidEmail(email.value)) {
-                email.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            // Validate subject
-            const subject = document.getElementById('subject');
-            if (!subject.value || subject.value === '') {
-                subject.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            // Validate message
-            const message = document.getElementById('message');
-            if (!message.value || message.value.trim() === '') {
-                message.closest('.form-group').classList.add('error');
-                isValid = false;
-            }
-
-            if (!isValid) {
-                const firstError = document.querySelector('.form-group.error');
-                if (firstError) {
-                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-                return false;
-            }
-
-            // Show loading state
-            const submitBtn = document.getElementById('submitBtn');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-
-            // Simulate form submission
-            setTimeout(() => {
-                // Save to localStorage (for demo purposes)
-                const formData = {
-                    name: name.value,
-                    email: email.value,
-                    phone: document.getElementById('phone').value,
-                    subject: subject.value,
-                    message: message.value,
-                    timestamp: new Date().toISOString()
-                };
-                localStorage.setItem('bbe_contact_' + Date.now(), JSON.stringify(formData));
-
-                // Reset form
-                document.getElementById('contactForm').reset();
-                
-                // Show success modal
-                showModal();
-                
-                // Reset button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-            }, 1500);
-
-            return false;
-        }
-
-        function isValidEmail(email) {
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailPattern.test(email);
-        }
-
-        function showModal() {
-            const modal = document.getElementById('successModal');
-            modal.style.display = 'block';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('successModal');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close modal when clicking outside
-        window.onclick = function(event) {
-            const modal = document.getElementById('successModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-
-        // Real-time validation
-        const formInputs = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
-        formInputs.forEach(input => {
-            input.addEventListener('blur', function() {
-                if (this.closest('.form-group').classList.contains('error')) {
-                    validateField(this);
-                }
-            });
-
-            input.addEventListener('input', function() {
-                if (this.closest('.form-group').classList.contains('error')) {
-                    validateField(this);
-                }
-            });
-        });
-
-        function validateField(field) {
-            const formGroup = field.closest('.form-group');
-            
-            if (field.hasAttribute('required') && field.value.trim() === '') {
-                formGroup.classList.add('error');
-                return false;
-            }
-
-            if (field.type === 'email' && field.value) {
-                if (!isValidEmail(field.value)) {
-                    formGroup.classList.add('error');
-                    return false;
-                }
-            }
-
-            formGroup.classList.remove('error');
-            return true;
         }
     </script>
 </body>
