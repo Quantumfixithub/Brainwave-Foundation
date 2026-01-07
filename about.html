@@ -384,6 +384,58 @@
                 height: 250px;
             }
         }
+.team-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+
+.team-photo img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%; /* circular */
+  border: 4px solid #0077b6; /* accent color */
+}
+
+.team-info {
+  margin-top: 15px;
+  display: none; /* hidden until clicked */
+}
+
+.team-card.active .team-info {
+  display: block; /* show info when clicked */
+}
+
+.role {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+.certification {
+  font-style: italic;
+  color: #444;
+}
+
+
+
   </style>
 </head>
 <body>
@@ -473,67 +525,177 @@
 
     <!-- Team Section -->
 <section class="team-section">
-    <div class="container">
-        <h2>Meet Our Team</h2>
-        <div class="team-grid">
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Cindy Bassey Okon</h3>
-                    <p class="role">Founder & Director</p>
-                    <p>Passionate educator with 15+ years of experience in academic excellence programs.</p>
-                </div>
-            </div>
-            
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Ayomikun Ajibade</h3>
-                    <p class="role">Social Media Manager</p>
-                    <p>Bringing technology and innovation to education for the digital age.</p>
-                </div>
-            </div>
+  <div class="container">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
 
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Adetutu Oluwatobi & Oyetayo Oyebisi</h3>
-                    <p class="role">Tech & Innovation Lead</p>
-                    <p>Bringing technology and innovation to education for the digital age.</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Dedagha Agbor & Christopher Chidia</h3>
-                    <p class="role">Finance Team</p>
-                    <p>Managing financial operations and ensuring transparent resource allocation.</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Oyetayo Oyebisi, Iwasam Egbe, Micheal Owan & Tamuntonye Mariam</h3>
-                    <p class="role">Academic Coordinator</p>
-                    <p>Expert in curriculum development and academic competition management.</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Oladoyin & Ibechukwu</h3>
-                    <p class="role">Welfare Team</p>
-                    <p>Dedicated to creating engaging learning experiences for students across all levels.</p>
-                </div>
-            </div>
-
-            <div class="team-card">
-                <div class="team-info">
-                    <h3>Oluwatoyin Joshua</h3>
-                    <p class="role">Operations Team</p>
-                    <p>Ensuring smooth execution of all foundation activities and events.</p>
-                </div>
-            </div>
+      <!-- Founder -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="cindy.jpg" alt="Cindy">
         </div>
+        <div class="team-info">
+          <h3>Cindy Bassey Okon</h3>
+          <p class="role">Founder & Director</p>
+          <p class="certification">M.Ed, PhD (Education Leadership)</p>
+          <p>Passionate educator with 15+ years of experience in academic excellence programs.</p>
+        </div>
+      </div>
+
+      <!-- Social Media -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="ayomikun.jpg" alt="Ayomikun">
+        </div>
+        <div class="team-info">
+          <h3>Ayomikun Ajibade</h3>
+          <p class="role">Social Media Manager</p>
+          <p class="certification">B.Sc Mass Communication</p>
+          <p>Bringing technology and innovation to education for the digital age.</p>
+        </div>
+      </div>
+
+      <!-- Tech & Innovation Team -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="adetutu.jpg" alt="Adetutu">
+        </div>
+        <div class="team-info">
+          <h3>Adetutu Oluwatobi</h3>
+          <p class="role">Tech & Innovation Lead</p>
+          <p class="certification">B.Sc Computer Science</p>
+          <p>Bringing technology and innovation to education for the digital age.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="oyetayo.jpg" alt="Oyetayo">
+        </div>
+        <div class="team-info">
+          <h3>Oyetayo Oyebisi</h3>
+          <p class="role">Tech & Innovation Lead</p>
+          <p class="certification">Certified IT Specialist</p>
+          <p>Bringing technology and innovation to education for the digital age.</p>
+        </div>
+      </div>
+
+      <!-- Finance Team -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="dedagha.jpg" alt="Dedagha">
+        </div>
+        <div class="team-info">
+          <h3>Dedagha Agbor</h3>
+          <p class="role">Finance Team</p>
+          <p class="certification">B.Sc Accounting</p>
+          <p>Managing financial operations and ensuring transparent resource allocation.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="christopher.jpg" alt="Christopher">
+        </div>
+        <div class="team-info">
+          <h3>Christopher Chidia</h3>
+          <p class="role">Finance Team</p>
+          <p class="certification">Chartered Accountant</p>
+          <p>Managing financial operations and ensuring transparent resource allocation.</p>
+        </div>
+      </div>
+
+      <!-- Academic Coordinators -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="oyetayo.jpg" alt="Oyetayo">
+        </div>
+        <div class="team-info">
+          <h3>Oyetayo Oyebisi</h3>
+          <p class="role">Academic Coordinator</p>
+          <p class="certification">M.Ed Curriculum Development</p>
+          <p>Expert in curriculum development and academic competition management.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="iwasam.jpg" alt="Iwasam">
+        </div>
+        <div class="team-info">
+          <h3>Iwasam Egbe</h3>
+          <p class="role">Academic Coordinator</p>
+          <p class="certification">Certified Education Specialist</p>
+          <p>Expert in curriculum development and academic competition management.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="micheal.jpg" alt="Micheal">
+        </div>
+        <div class="team-info">
+          <h3>Micheal Owan</h3>
+          <p class="role">Academic Coordinator</p>
+          <p class="certification">M.Sc Education Management</p>
+          <p>Expert in curriculum development and academic competition management.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="tamuntonye.jpg" alt="Tamuntonye">
+        </div>
+        <div class="team-info">
+          <h3>Tamuntonye Mariam</h3>
+          <p class="role">Academic Coordinator</p>
+          <p class="certification">Certified Curriculum Designer</p>
+          <p>Expert in curriculum development and academic competition management.</p>
+        </div>
+      </div>
+
+      <!-- Welfare Team -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="oladoyin.jpg" alt="Oladoyin">
+        </div>
+        <div class="team-info">
+          <h3>Oladoyin</h3>
+          <p class="role">Welfare Team</p>
+          <p class="certification">B.Sc Sociology</p>
+          <p>Dedicated to creating engaging learning experiences for students across all levels.</p>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="ibechukwu.jpg" alt="Ibechukwu">
+        </div>
+        <div class="team-info">
+          <h3>Ibechukwu</h3>
+          <p class="role">Welfare Team</p>
+          <p class="certification">Certified Student Engagement Specialist</p>
+          <p>Dedicated to creating engaging learning experiences for students across all levels.</p>
+        </div>
+      </div>
+
+      <!-- Operations -->
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="oluwatoyin.jpg" alt="Oluwatoyin">
+        </div>
+        <div class="team-info">
+          <h3>Oluwatoyin Joshua</h3>
+          <p class="role">Operations Team</p>
+          <p class="certification">MBA Project Management</p>
+          <p>Ensuring smooth execution of all foundation activities and events.</p>
+        </div>
+      </div>
+
     </div>
+  </div>
 </section>
+
 
     <!-- Impact Section -->
     <section class="impact-section">
@@ -604,8 +766,12 @@
         if (impactSection) {
             statObserver.observe(impactSection);
         }
+document.querySelectorAll('.team-card').forEach(card => {
+  card.addEventListener('click', () => {
+    card.classList.toggle('active');
+  });
+});
+
     </script>
 </body>
 </html>
-
-
